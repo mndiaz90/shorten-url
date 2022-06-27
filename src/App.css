@@ -1,0 +1,47 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.App-header {
+  background-color: #ea8787;
+  width: 100%;
+  text-align: left;
+  font-size: calc(20px + 2vmin);
+  color: white;
+}
+
+th,
+td {
+  padding: 8px;
+}
+
+form {
+  margin-bottom: 1rem;
+}
+
+input {
+  width: 60%;
+  border: none;
+  border-bottom: 1px solid darkgray;
+  margin: 10px;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  color: white;
+  background-color: darkseagreen;
+  border: none;
+  height: 2rem;
+  border-radius: 5px;
+}
+
+a {
+  text-decoration: none;
+}
