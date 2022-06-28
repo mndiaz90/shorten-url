@@ -20,8 +20,8 @@ export async function visitUrl(id: number) {
   const resp = await fetch(`${API_URL}/visit/${id}`, {
     method: "POST",
   });
-  const data = await resp.json();
-  return data;
+  const url = await resp.json();
+  return url;
 }
 
 export async function deleteUrl(id: number) {

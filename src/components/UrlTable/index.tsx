@@ -16,8 +16,10 @@ type UrlTableProps = {
 };
 
 function UrlTable({ urls, getAllUrls }: UrlTableProps) {
-  const onVisitUrl = (id: number) => {
-    visitUrl(id);
+  const onVisitUrl = async (id: number) => {
+    const { original_url } = await visitUrl(id);
+
+    window.open(original_url, "_blank")?.focus();
   };
 
   const onDelete = (id: number) => {
@@ -40,13 +42,9 @@ function UrlTable({ urls, getAllUrls }: UrlTableProps) {
           return (
             <tr key={url.id}>
               <td>
-                <a
-                  href={url.original_url}
-                  onClick={() => onVisitUrl(url.id)}
-                  target="blank"
-                >
+                <Link href="#" onClick={() => onVisitUrl(url.id)}>
                   {url.short_url}
-                </a>
+                </Link>
               </td>
               <td>{url.original_url}</td>
               <td>{url.created_at}</td>
