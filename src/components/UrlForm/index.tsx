@@ -28,9 +28,9 @@ const UrlForm = ({ getAllUrls }: UrlFormProps) => {
   };
 
   return (
-    <form onSubmit={onSubmit} className="form-shorten">
+    <form onSubmit={onSubmit} className="url-form">
       <input
-        className="form-shorten__input"
+        className="url-form__input"
         type="text"
         placeholder="Your original URL here: Ex: https://www.google.com"
         value={inputUrl}
@@ -38,7 +38,7 @@ const UrlForm = ({ getAllUrls }: UrlFormProps) => {
           onChangeInput(event)
         }
       />
-      <button className="form-shorten__button">SHORTEN URL</button>
+      <button className="url-form__button">SHORTEN URL</button>
       <span style={{ color: "red" }}>{invalidUrlMsg}</span>
     </form>
   );

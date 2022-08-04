@@ -1,4 +1,4 @@
-.form-shorten {
+.url-form {
   display: flex;
   flex-direction: column;
   justify-items: center;
@@ -10,7 +10,7 @@
   width: 30rem;
 }
 
-.form-shorten__input {
+.url-form__input {
   padding: 2px;
   width: 65%;
   border: none;
@@ -18,11 +18,11 @@
   margin: 10px;
 }
 
-.form-shorten__input:focus {
+.url-form__input:focus {
   outline: none;
 }
 
-.form-shorten__button {
+.url-form__button {
   cursor: pointer;
   color: white;
   background-color: darkseagreen;
